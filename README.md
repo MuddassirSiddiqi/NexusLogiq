@@ -3,7 +3,7 @@
 ## Overview
 This is a single-page responsive prototype for a logistics-tech system. It is designed to help operations teams understand fleet performance through a clean, simplified dashboard, shifting away from legacy data-heavy interfaces to improve usability and clarity.
 
-**Live Demo:** (https://www.google.com/search?q=https://muddassirsiddiqi.github.io/NexusLogiq/)
+**Live Demo:** (https://muddassirsiddiqi.github.io/NexusLogiq/)
 
 ## Features
 * **KPI Header:** Tracks active vehicles, average fuel efficiency, and pending alerts at a glance.
