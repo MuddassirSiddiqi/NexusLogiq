@@ -3,7 +3,7 @@
 ## Overview
 This is a single-page responsive prototype for a logistics-tech system. It is designed to help operations teams understand fleet performance through a clean, simplified dashboard, shifting away from legacy data-heavy interfaces to improve usability and clarity.
 
-**Live Demo:** [Insert your GitHub Pages link here]
+**Live Demo:** (https://www.google.com/search?q=https://muddassirsiddiqi.github.io/NexusLogiq/)
 
 ## Features
 * **KPI Header:** Tracks active vehicles, average fuel efficiency, and pending alerts at a glance.
@@ -14,7 +14,7 @@ This is a single-page responsive prototype for a logistics-tech system. It is de
 ## Tech Stack
 * **HTML5:** Semantic structure for accessibility and clarity.
 * **CSS3:** Custom variables, CSS Grid architecture, smooth transitions, and mobile-first responsive design.
-* **Vanilla JavaScript:** DOM manipulation and event handling without the overhead of external frameworks.
+* **JavaScript:** DOM manipulation and event handling without the overhead of external frameworks.
 
 ## Local Setup
 1. Clone the repository: `git clone https://github.com/MuddassirSiddiqi/NexusLogiq.git`
