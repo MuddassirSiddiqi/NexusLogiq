@@ -1,0 +1,201 @@
+/* --- Global Variables for Scalability --- */
+:root {
+    --primary-color: #2563eb;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --danger: #ef4444;
+}
+
+/* --- Base Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* --- KPI Header (Grid Layout) --- */
+.kpi-header {
+    display: grid;
+    /* Auto-fit creates a responsive grid without media queries! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.kpi-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+.kpi-card.alert {
+    border-top-color: var(--danger);
+}
+
+.kpi-card h3 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-card .kpi-value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.kpi-card.alert .kpi-value {
+    color: var(--danger);
+}
+
+/* --- Main Dashboard Container --- */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Table takes 2/3 width, Form takes 1/3 */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.table-section, .form-section {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* --- Table Styling --- */
+.table-wrapper {
+    overflow-x: auto; /* Keeps table from breaking mobile screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- Status & Priority Badges (Pills) --- */
+.status, .priority {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Status Colors */
+.status.in-transit { background-color: #dbeafe; color: #1d4ed8; }
+.status.delivered { background-color: #d1fae5; color: #047857; }
+.status.delayed { background-color: #fee2e2; color: #b91c1c; }
+
+/* Priority Colors */
+.priority.high { background-color: #fee2e2; color: #b91c1c; }
+.priority.low { background-color: #f3f4f6; color: #4b5563; }
+
+/* --- Interactive Form Styling --- */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- JS Message Utility Classes --- */
+.hidden {
+    display: none;
+}
+
+#confirmation-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.success-msg {
+    background-color: #d1fae5;
+    color: #047857;
+    border: 1px solid #34d399;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 850px) {
+    .dashboard-container {
+        /* Stack the table and form vertically on smaller screens */
+        grid-template-columns: 1fr;
+    }
+}

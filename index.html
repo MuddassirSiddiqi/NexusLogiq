@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusLogiq - Fleet Performance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="kpi-header">
+        <div class="kpi-card">
+            <h3>Active Vehicles</h3>
+            <p class="kpi-value">42</p>
+        </div>
+        <div class="kpi-card">
+            <h3>Avg Fuel Efficiency</h3>
+            <p class="kpi-value">8.4 MPG</p>
+        </div>
+        <div class="kpi-card alert">
+            <h3>Pending Alerts</h3>
+            <p class="kpi-value">3</p>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="table-section">
+            <h2>Recent Shipments</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vehicle ID</th>
+                            <th>Destination</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>V-1042</td>
+                            <td>Chicago, IL</td>
+                            <td><span class="status in-transit">In-Transit</span></td>
+                            <td><span class="priority high">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>V-0891</td>
+                            <td>Dallas, TX</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                            <td><span class="priority low">Low</span></td>
+                        </tr>
+                        <tr>
+                            <td>V-2033</td>
+                            <td>Atlanta, GA</td>
+                            <td><span class="status delayed">Delayed</span></td>
+                            <td><span class="priority high">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>V-1105</td>
+                            <td>Denver, CO</td>
+                            <td><span class="status in-transit">In-Transit</span></td>
+                            <td><span class="priority low">Low</span></td>
+                        </tr>
+                        <tr>
+                            <td>V-0774</td>
+                            <td>Seattle, WA</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                            <td><span class="priority low">Low</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Update Fleet Status</h2>
+            <form id="update-form">
+                <div class="form-group">
+                    <label for="vehicle-id">Vehicle ID</label>
+                    <input type="text" id="vehicle-id" name="vehicle-id" placeholder="e.g. V-1042" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="status-update">New Status</label>
+                    <select id="status-update" name="status-update" required>
+                        <option value="" disabled selected>Select status...</option>
+                        <option value="In-Transit">In-Transit</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Delayed">Delayed</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Update Status</button>
+            </form>
+            <div id="confirmation-message" class="hidden"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
