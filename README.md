@@ -1,4 +1,4 @@
-# NexusLogiq - Fleet Performance Dashboard
+# NexusLogiq - Fleet Performance Dashboard V1.0
 
 ## Overview
 This is a single-page responsive prototype for a logistics-tech system. It is designed to help operations teams understand fleet performance through a clean, simplified dashboard, shifting away from legacy data-heavy interfaces to improve usability and clarity.
